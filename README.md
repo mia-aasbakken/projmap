@@ -12,4 +12,4 @@ http://bitflavour.net/cubsytubsy
 - L: toggle wireframe
 - M: turn on mouse controlled light
 - N: reset light
-- B: turn on brick texture
+- B: toggle brick texture
