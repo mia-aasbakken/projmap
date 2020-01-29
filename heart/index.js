@@ -58,9 +58,7 @@ function render(time) {
     
     pointLight.position.z = Math.sin(timeInSeconds*2)+8   
     pointLight.intensity = Math.cos(timeInSeconds*2)
-
-    let color = changeColor(timeInSeconds)
-    pointLight.color = new THREE.Color('hsl('+color+', 100%, 50%)');
+    pointLight.color = new THREE.Color('hsl('+changeColor(timeInSeconds)+', 100%, 50%)');
 
     renderer.render(scene, camera);
 }
