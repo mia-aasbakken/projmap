@@ -57,11 +57,11 @@ function render(time) {
         directionalLight.position.z = Math.sin(timeInSeconds)
     }
 
-    directionalLight.intensity = Math.sin(timeInSeconds*0.2)*8
+    directionalLight.intensity = Math.max(Math.sin(timeInSeconds*0.1)*4, 0.2)
     directionalLight.position.normalize()
     
-    pointLight.position.z = Math.sin(timeInSeconds*2)*8
-    pointLight.intensity = Math.cos(timeInSeconds*2)*4
+    pointLight.position.z = Math.sin(timeInSeconds)+2
+    pointLight.intensity = Math.max(Math.sin(timeInSeconds)*8, 0.2)
     pointLight.color = new THREE.Color('hsl('+changeColor(timeInSeconds)+', 100%, 50%)');
 
     renderer.render(scene, camera);
